@@ -1,0 +1,35 @@
+{
+  "name": "Typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node dist/app.js",
+    "dev": "nodemon src/app.ts",
+    "build": "tsc -p ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "exceljs": "^1.12.2",
+    "express": "^4.17.1",
+    "html": "^1.0.0",
+    "knex": "^0.17.6",
+    "mssql": "^5.1.0",
+    "path": "^0.12.7",
+    "rxjs": "^6.5.2",
+    "ts-xlsx": "0.0.11",
+    "xlsx-to-json": "^0.3.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.5",
+    "@types/express": "^4.17.0",
+    "nodemon": "^1.19.1",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.5.2"
+  }
+}
