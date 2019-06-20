@@ -1,0 +1,25 @@
+<div class="people">
+        <h1>People</h1>
+</div>
+
+
+<table class="table" *ngIf="users">
+    <thead class="thead-dark">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>See more</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users.data">
+            <td>{{user.nombre}}</td>
+            <td>{{user.edad}}</td>
+            <td><a href="#"> More about {{user.nombre}} </a></td>
+            <td><button type="button" class="btn btn-outline-primary"  (click)="Update(user.nombre)">Update</button></td>
+            <td><button type="button" class="btn btn-outline-danger"  (click)="Delete(user.nombre)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>

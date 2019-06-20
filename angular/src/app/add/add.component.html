@@ -1,0 +1,33 @@
+<div class="titulo">
+  <h1>Add person</h1>
+</div>
+<div class="formulario">
+    <form [formGroup]="messageForm" (ngSubmit)="onSubmit()" >
+
+        <div class="form-group">
+          <label for="email">Name</label>
+          <input type="text" class="form-control" id="email" formControlName="name">
+          <div *ngIf="submited && messageForm.controls.name.errors" class="error">
+           <div *ngIf="messageForm.controls.name.errors.required">You must type your name.</div>
+          </div> 
+        </div>
+       
+        <div class="form-group">
+          <label for="pwd">Age</label>
+          <input type="number" min="18" max="100" class="form-control" id="pwd" formControlName="age">
+          <div *ngIf="submited && messageForm.controls.age.errors" class="error">
+            <div *ngIf="messageForm.controls.age.errors.required">You must type your age.</div>
+          </div> 
+        </div>
+       
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+
+      <div *ngIf='success'>
+        <br><br>
+        <strong>Persona agregada con éxito!</strong>
+        <br><br>
+        <a routerLink="/people">Ver personas</a>
+      </div>
+      
+</div>
